@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+<%- include('partials/navbar') %> 
+
+    <h1 class="productOption mt-5">All Books</h1>
+
+    <div class="container justify-content-around">
+        <% let i=2; %> 
+        <% for(let product of products) { %> 
+            <% if(i%2 === 0) {%> 
+             <div class="row py-3 mm">
+            <% } %> 
+            <div class="col-sm-6">
+                <div class="card h-100" style="width: 18rem;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <img src="<%= product.img %>" alt="<%= product.name %>" class="card-img-top">
+
+                    <div class="card-body">
+                        <h5 class="card-title"><a class="anchor" href="/products/<%=product._id%> "><%= product.name %></a></h5>
+                        <p><%= product.price %> </p>
+                        <author><%= product.author %> </author>
+                    </div>
+                    
+                </div>
+            </div>
+            <% if(i%2 === 1){ %> 
+             </div>
+             <% } %> 
+             <% i++; %> 
+        <% } %> 
+    </div>
+ 
+
+
+
+    <!-- <div class="products">
+      <div class="row">
+        <% for(let product of products) {%>
+          <div class="col">
+            <img src="<%= product.img %>" alt="<%= product.name %>">
+            <br>
+            <a href="/products/<%=product._id%> "><%= product.name %></a>
+          </div>
+        <% } %> 
+      </div> -->
+      
+    </div>
+       
+      <script src="/bootstrap.min.js"></script>
+
+</body>
+</html>

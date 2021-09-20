@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Rubik:wght@300;400&display=swap');
+
+body
+{
+    font-family: sans-serif;
+    background-color: #333333;
+    text-transform: capitalize;
+}
+.navbar{
+    width: 100%;
+}
+
+.pull{
+    float: right;
+    margin-right: 20px;
+}
+
+.input{
+    
+    width: 300px;
+    padding: 7px;
+}
+
+.loginbutton{
+    margin-top: 5%;
+    width: 100px;
+    padding: 5px;
+}
+
+.loginbutton:hover{
+    background-color: cadetblue;
+    color: cornsilk;
+}
+
+.logout-button {
+    color: rgba(255, 255, 255, .55);
+    background:none;
+    border:none; 
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding: .5rem 1rem;
+    
+}
+.container-1{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-button{
+        background-color: #FDD451;
+        border: none;
+        color: black;
+        text-transform: uppercase;
+        float: left;
+        width: 12rem;
+        height: 3rem;
+}
+
+.label{
+    color: white;
+    font-size: large;
+}
+
+.container-2{
+    
+    margin-top: 100px;
+    margin-left: 500px;
+}
+
+.loginform{
+    display: flexbox;
+    color: white;
+    font-size: 13px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+#btn1{
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 7px 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    background-color: white;
+}
+#btn1:hover{
+    background-color: #e1ad01;
+    transition: .7s;
+    color: white;
+}
+
+.page-heading
+{
+    text-align: center;
+    color: darkblue;
+}
+
+.products
+{
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.row
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col
+{
+    text-align: center;  
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+} 
+
+.col img
+{
+    width: 100%;
+}
+
+fieldset
+{
+    margin: 0 auto;
+    margin-top: 8%;
+    border: 5px double black;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.form, .product-details
+{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.heading{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.form th
+{
+    padding: 1%;
+    width: 50%;
+}
+
+.product-details th
+{
+    padding: 1%;
+    width: 50%;
+    text-align: center;
+}
+
+.card-body{
+    background-color: #202020;
+    color : white;
+    
+}
+
+.card-body:hover{
+    border: none;
+}
+
+.card{
+    border: none;
+    overflow: hidden;
+}
+
+
+
+.card:hover{
+    border: none;
+    transform: scale(1.06);
+    z-index: 1;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.card-img-top:hover{
+    border: none;
+}
+
+.card span{
+    transition: .5s;
+    opacity: 0;
+}
+
+
+.card:hover span{
+    transition: .5s;
+    opacity: 1;
+}
+
+.card span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #FF0000);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        transform: translate(-100%);
+    }
+    
+    100%{
+        transform: translate(100%);
+    }
+}
+
+.card span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #FF0000);
+    animation: animate2 2s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.card span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, transparent, #FF0000);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3{
+    0%{
+        transform: translate(100%);
+    }
+    
+    100%{
+        transform: translate(-100%);
+    }
+}
+
+.card span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #FF0000);
+    animation: animate4 2s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.head{
+    font-size: 100px;
+}
+
+.productOption{
+	
+	
+    background: radial-gradient(circle, #F78FB1 0%,  #CE97D8 20%, #B2EB82 40%, #A2D6A7 60%, #B39FDB 100%);
+   
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: gradient 10s linear infinite alternate;
+    font-family: Open Sans;
+    font-weight: 100;
+    text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 40px;
+    
+
+}
+@keyframes gradient {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+
+.productOption-1{
+	
+	
+    background: radial-gradient(circle, #F78FB1 0%,  #CE97D8 20%, #B2EB82 40%, #A2D6A7 60%, #B39FDB 100%);
+   
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: gradient 10s linear infinite alternate;
+    font-family: Open Sans;
+    font-weight: 100;
+    text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 70px;
+    
+
+}
+@keyframes gradient {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+  
+.mm{
+    margin-left: 15%;
+}
+
+.anchor {
+    color: white;
+    text-decoration: none;
+    cursor: auto;
+    }

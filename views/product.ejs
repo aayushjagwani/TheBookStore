@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= product.name %> </title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <%- include('partials/navbar') %> 
+
+    <h1 class="productOption mt-5"><%= product.name %></h1>
+    <br>
+    <img class="rounded mx-auto d-block" src="<%= product.img %>" alt="">
+    <fieldset>
+        <table class="product-details label">
+            <tr>
+                <th>Author:</th>
+                <th><%= product.author %></th>
+            </tr>
+            <tr>
+                <th>Genre:</th>
+                <th><%= product.genre %></th>
+            </tr>
+            <tr>
+                <th>Quantity:</th>
+                <th><%=product.qty %></th>
+            </tr>
+            <tr>
+                <th>Price:</th>
+                <th><%= product.price %></th>
+            </tr>
+            <tr>
+                <th style="text-align: center"><button class="loginbutton"><a href="/products/<%=product._id%>/edit">Edit</a></button></th>
+                <th style="text-align: center;">
+                    <form action="/products/<%=product._id%>?_method=DELETE" method="POST">
+                        <button class="loginbutton">Delete</button>
+                    </form>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" style="text-align: center;"><button class="loginbutton"><a href="/products">Cancel</a></button></th>
+            </tr>
+        </table>
+    </fieldset>
+    <script src="/bootstrap.min.js"></script>
+    
+</body>
+</html>
+

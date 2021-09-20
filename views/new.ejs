@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New product</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('partials/navbar') %> 
+    <h1 class="productOption mt-5">ADD A NEW PRODUCT</h1>
+    <fieldset class="container">
+        <form action="/products" method="POST">
+            <table class="form label">
+                <tr>
+                    <th><label for="name">Product Name:</label></th>
+                    <th><input type="text" name="name" placeholder="Product Name" id="name" class="input"></th>
+                </tr>
+                <tr>
+                    <th><label for="price">Price:</label></th>
+                    <th><input type="number" name="price" placeholder="Price" id="price" class="input"></th>
+                </tr>
+                <tr>
+                    <th><label for="genre">Genre:</label></th>
+                    <th>
+                        <select name="genre" id="genre" class="input">
+                            <% for(let category of categories) {%>     
+                                <option value="<%=category%>"> 
+                                    <%=category%> 
+                                </option>
+                            <% } %> 
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="author">Author:</label></th>
+                    <th><input type="text" name="author" placeholder="Author" id="author" class="input"></th>
+                </tr>
+                <tr>
+                    <th><label for="qty">Quantity:</label></th>
+                    <th><input type="number" name="qty" placeholder="Quantity" id="qty" class="input"></th>
+                </tr>    
+                <tr>
+                    <th><label for="img">Image:</label></th>
+                    <th><input type="file" name="img" id="img" class="input"></th>
+                </tr>
+                <tr>
+                    <th style="text-align: center;"><button class="loginbutton">Submit</button></th>
+                    <th style="text-align: center;"><button class="loginbutton"><a href="/products">Cancel</a></button></th>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    <script src="/bootstrap.min.js"></script>
+</body>
+</html>
